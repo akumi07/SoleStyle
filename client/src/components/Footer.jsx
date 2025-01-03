@@ -4,6 +4,7 @@ import {
   FaInstagram,
   FaYoutube,
   FaPhoneAlt,
+  FaLinkedin
 } from "react-icons/fa";
 import { IoIosMail } from "react-icons/io";
 import { Link } from "react-router-dom";
@@ -34,8 +35,8 @@ const Footer = () => {
               </p>
               <ul className="footer-social">
                 <li>
-                  <Link to="/" target="_blank" rel="noopener noreferrer">
-                    <FaFacebook />
+                  <Link to="https://www.linkedin.com/in/akashmishra07/" target="_blank" rel="noopener noreferrer">
+                  <FaLinkedin />
                   </Link>
                 </li>
                 <li>
@@ -134,11 +135,11 @@ const Footer = () => {
             <p>
               Made By{" "}
               <Link
-                to="https://sumilsuthar.me/"
+                to="https://portfolio-akumi07.netlify.app/#home"
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                Sumil Suthar
+                Akash Mishra
               </Link>
             </p>
           </div>
