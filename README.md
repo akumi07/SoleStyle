@@ -61,7 +61,7 @@ Follow these steps to set up Shoekart on your local machine:
 1.  **Clone the Repository:**
 
     ```bash
-    git clone https://github.com/SumilSuthar197/Shoekart.git
+    https://github.com/akumi07/Shoe-kart.git
     ```
 
 2.  **Install Dependencies:**
