@@ -26,7 +26,7 @@ const SizeModal = ({ id, size, onClose }) => {
       const token = localStorage.getItem("jwt");
       console.log("Size Selected: ", Number(sizeSelected.value));
       const response = await Axios.post(
-        "/cart/add",
+        "api/v1/cart/add",
         {
           productId: id,
           qty: 1,

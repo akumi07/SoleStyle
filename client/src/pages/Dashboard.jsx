@@ -42,7 +42,7 @@ const Dashboard = () => {
         if (!token) {
           return toast.error("Access denied. Please login first.");
         }
-        const res = await Axios.get("/admin/info", {
+        const res = await Axios.get("api/v1/admin/info", {
           headers: {
             Authorization: token,
           },

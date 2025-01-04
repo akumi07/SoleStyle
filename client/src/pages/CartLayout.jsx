@@ -52,7 +52,7 @@ const CartLayout = () => {
   const handleCheckout = async () => {
     try {
       const response = await Axios.post(
-        "/payment/create-checkout-session",
+        "api/v1/payment/create-checkout-session",
         { coupon: appliedCoupon ? couponCode.toUpperCase() : "" },
         { headers: { Authorization: localStorage.getItem("jwt") } }
       );
@@ -68,7 +68,7 @@ const CartLayout = () => {
   const applyCoupon = (coupon) => {
     if (!data || data.length <= 0) return toast.error("Cart is empty.");
     console.log(coupon.toUpperCase());
-    const listOfCoupons = ["SUMILSUTHAR197", "NIKE2024"];
+    const listOfCoupons = ["SUMILSUTHAR197", "NIKE2024","HRX2024"];
     if (listOfCoupons.includes(coupon.toUpperCase())) {
       setCouponCode(coupon);
       setAppliedCoupon(true);
