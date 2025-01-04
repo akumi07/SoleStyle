@@ -75,8 +75,8 @@ const ContactForm = () => {
             alt="profile-photo"
           />
           <p>
-            <span>Sumil Suthar</span>Software Engineer <br />
-            sumil.suthar@gmail.com
+            <span>Akash Mishra</span>Software Engineer <br />
+            akumi070128@gmail.com
           </p>
         </div>
         <div>
@@ -85,8 +85,8 @@ const ContactForm = () => {
             alt="profile-photo"
           />
           <p>
-            <span>Sumil Suthar</span>Software Engineer <br />
-            sumil.suthar@gmail.com
+            <span>Akash Mishra</span>Software Engineer <br />
+            akumi070128@gmail.com
           </p>
         </div>
         <div>
@@ -95,20 +95,20 @@ const ContactForm = () => {
             alt="profile-photo"
           />
           <p>
-            <span>Sumil Suthar</span>Software Engineer <br />
-            sumil.suthar@gmail.com
+            <span>Akash Mishra</span>Software Engineer <br />
+            akumi070128@gmail.com
           </p>
         </div>
-        <div>
+        {/* <div>
           <img
             src="https://secdatacom.no/wp-content/uploads/sites/3/2019/10/blank-profile-male.jpg"
             alt="profile-photo"
           />
           <p>
-            <span>Sumil Suthar</span>Software Engineer <br />
-            sumil.suthar@gmail.com
+            <span>Akash Mishra</span>Software Engineer <br />
+            akumi070128@gmail.com
           </p>
-        </div>
+        </div> */}
       </div>
     </div>
   );

@@ -136,7 +136,7 @@ const createProduct = asyncErrorHandler(async (req, res, next) => {
     return next(new errorHandler("Product already exists", 400));
   }
 
-  const newProduct=await product.create({
+  await product.create({
     sku,
     name,
     brand,
@@ -150,28 +150,14 @@ const createProduct = asyncErrorHandler(async (req, res, next) => {
     isFeatured: featured,
   });
 
-  let productBrand = await brands.findOne({ name: brand });
+  const productBrand = await brands.findOne({ name: brand });
+  productBrand.totalProducts += 1;
+  productBrand.activeProducts += 1;
+  await productBrand.save();
 
-  if (!productBrand) {
-    // If the brand does not exist, create a new brand
-    productBrand = new brands({
-      name: brand,
-      totalProducts: 1,  // This will be 1 because it's the first product for this brand
-      activeProducts: 1, // This will be 1 as it's an active product
-    });
-    await productBrand.save(); // Save the new brand to the database
-  } else {
-    // If the brand exists, update the product count
-    productBrand.totalProducts += 1;
-    productBrand.activeProducts += 1;
-    await productBrand.save(); // Save the updated brand
-  }
-
-  // Respond with a success message
   res.status(201).json({
     success: true,
     message: "Product created successfully",
-    product: newProduct, // Optionally include the new product in the response
   });
 });
 
