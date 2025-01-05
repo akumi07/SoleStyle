@@ -29,8 +29,8 @@ app.get("/", (req, res) => {
     description:
       "This is an API for an shoes E-commerce application. It provides endpoints for managing products, orders, and users.",
     author: {
-      name: "Sumil Suthar",
-      portfolio: "http://sumilsuthar.me/",
+      name: "Akash Mishra",
+      portfolio: "https://portfolio-akumi07.netlify.app/",
     },
     version: "1.0.0",
   });

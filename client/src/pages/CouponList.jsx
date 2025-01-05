@@ -111,7 +111,7 @@ const CouponList = () => {
       if (!formData.name) {
         return toast.error("Please select a coupon to delete.");
       }
-      if (formData.name === "SUMILSUTHAR197") {
+      if (formData.name === "HRX2024") {
         return toast.error("You can't delete this coupon.");
       }
 

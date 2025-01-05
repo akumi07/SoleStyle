@@ -13,7 +13,7 @@ const CategoryList = () => {
       if (!token) {
         return toast.error("Access denied. Please login first.");
       }
-      const response = await Axios.get("/category", {
+      const response = await Axios.get("api/v1/category", {
         headers: {
           Authorization: token,
         },
