@@ -16,7 +16,7 @@ const MyOrders = () => {
   const navigate = useNavigate();
   const fetchData = async () => {
     try {
-      const response = await Axios.get("/orders", {
+      const response = await Axios.get("api/v1/orders", {
         headers: {
           Authorization: localStorage.getItem("jwt"),
         },
