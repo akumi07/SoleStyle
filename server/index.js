@@ -1,14 +1,24 @@
 require("dotenv").config();
 const express = require("express");
-const app = express();
 const cors = require("cors");
+const app = express();
 const connectDatabase = require("./db/connect");
 const errorHandlerMiddleware = require("./middleware/error");
 
-app.use(cors());
+// Configure CORS
+const allowedOrigins = [process.env.FRONTEND_URL]; // Allow only the frontend domain
+app.use(
+  cors({
+    origin: allowedOrigins, // Allow requests from your frontend
+    methods: "GET,POST,PUT,DELETE,PATCH", // Allowed HTTP methods
+    credentials: true, // Allow credentials (cookies, headers, etc.)
+  })
+);
+
+// Serve static files
 app.use(express.static("./public"));
 
-// import routes
+// Import routes
 const userRoute = require("./routes/user");
 const productRoute = require("./routes/product");
 const cartRoute = require("./routes/cart");
@@ -19,15 +29,18 @@ const categoryRoute = require("./routes/category");
 const { webhook } = require("./controllers/payments");
 const { verifyToken, adminOnly } = require("./middleware/auth");
 
+// Webhook route (raw middleware)
 app.post("/webhook", express.raw({ type: "application/json" }), webhook);
+
+// Middleware to parse JSON
 app.use(express.json());
 
-//using routes
+// Default route
 app.get("/", (req, res) => {
   res.json({
     project: "SoleStyle API",
     description:
-      "This is an API for an shoes E-commerce application. It provides endpoints for managing products, orders, and users.",
+      "This is an API for a shoes E-commerce application. It provides endpoints for managing products, orders, and users.",
     author: {
       name: "Akash Mishra",
       portfolio: "https://portfolio-akumi07.netlify.app/",
@@ -35,6 +48,8 @@ app.get("/", (req, res) => {
     version: "1.0.0",
   });
 });
+
+// Using routes
 app.use("/api/v1/payment", verifyToken, paymentRoute);
 app.use("/api/v1/", userRoute);
 app.use("/api/v1/product", productRoute);
@@ -43,14 +58,15 @@ app.use("/api/v1/admin", adminOnly, adminRoute);
 app.use("/api/v1/brands", adminOnly, brandRoute);
 app.use("/api/v1/category", adminOnly, categoryRoute);
 
+// Catch-all route for undefined endpoints
 app.get("*", (req, res) => {
-  //   res.sendFile(path.resolve(__dirname, "../frontend/build/index.html"));
-  res.json("404 Not Found");
+  res.status(404).json({ error: "404 Not Found" });
 });
 
-// Middleware for Errors
+// Middleware for errors
 app.use(errorHandlerMiddleware);
 
+// Start server
 const port = process.env.PORT || 5000;
 const StartServer = async () => {
   try {
