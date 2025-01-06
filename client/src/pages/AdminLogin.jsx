@@ -37,7 +37,7 @@ const AdminLogin = () => {
     <div className="login-page">
       <div className="login-div div1">
         <div className="login-box">
-          <h1 className="login-heading">Log in to your account</h1>
+          <h1 className="login-heading">Welcome To Admin Side</h1>
           <form onSubmit={handleSubmit} className="login-form">
             <div className="input-div">
               <label htmlFor="email">Email</label>
@@ -88,3 +88,8 @@ const AdminLogin = () => {
 };
 
 export default AdminLogin;
+
+
+
+
+

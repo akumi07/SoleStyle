@@ -122,8 +122,8 @@ const Footer = () => {
                     <IoIosMail />
                   </span>
                   <p>
-                    <Link to="mailto:knowmore@shoekart.in">
-                      knowmore@shoekart.in
+                    <Link to="mailto:knowmore@solestyle.in">
+                      knowmore@solestyle.in
                     </Link>
                   </p>
                 </li>

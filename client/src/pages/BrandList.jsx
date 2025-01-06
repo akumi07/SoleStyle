@@ -13,7 +13,7 @@ const BrandList = () => {
       if (!token) {
         return toast.error("Access denied. Please login first.");
       }
-      const response = await Axios.get("/brands", {
+      const response = await Axios.get("api/v1/brands", {
         headers: {
           Authorization: token,
         },
@@ -87,7 +87,7 @@ const BrandList = () => {
         return toast.error("Access denied.");
       }
       const response = await Axios.put(
-        `/brands/${id}`,
+        `api/v1/brands/${id}`,
         { ...formData },
         {
           headers: {
@@ -121,7 +121,7 @@ const BrandList = () => {
         return toast.error("Access denied.");
       }
       const response = await Axios.post(
-        "/brands",
+        "api/v1/brands",
         { ...formData },
         {
           headers: {

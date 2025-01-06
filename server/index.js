@@ -25,7 +25,7 @@ app.use(express.json());
 //using routes
 app.get("/", (req, res) => {
   res.json({
-    project: "Shoekart API",
+    project: "SoleStyle API",
     description:
       "This is an API for an shoes E-commerce application. It provides endpoints for managing products, orders, and users.",
     author: {

@@ -50,7 +50,7 @@ const AdminProductList = () => {
         return toast.error("Access denied.");
       }
       const response = await Axios.put(
-        `/admin/product/${id}`,
+        `api/v1/admin/product/${id}`,
         {},
         {
           headers: { Authorization: token },

@@ -65,7 +65,7 @@ const CategoryList = () => {
         return toast.error("Access denied.");
       }
       const response = await Axios.put(
-        `/category/${id}`,
+        `api/v1/category/${id}`,
         { ...formData },
         {
           headers: {
@@ -100,7 +100,7 @@ const CategoryList = () => {
         return toast.error("Access denied.");
       }
       const response = await Axios.post(
-        "/category",
+        "api/v1/category",
         { ...formData },
         {
           headers: {
@@ -124,7 +124,7 @@ const CategoryList = () => {
       if (!token) {
         return toast.error("Access denied.");
       }
-      const response = await Axios.delete(`/category/${id}`, {
+      const response = await Axios.delete(`api/v1/category/${id}`, {
         headers: {
           Authorization: token,
         },

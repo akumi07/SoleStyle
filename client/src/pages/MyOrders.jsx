@@ -46,7 +46,7 @@ const MyOrders = () => {
         orderId,
       });
       const response = await Axios.put(
-        "product/review",
+        "api/v1/product/review",
         { rating: review.rating, review: review.opinion, productId, orderId },
         {
           headers: {

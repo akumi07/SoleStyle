@@ -1,5 +1,5 @@
 import React from "react";
-import logo from "../../public/android-chrome-512x512.png";
+import logo from"../Images/logo345.svg" ;
 import SideItems from "./SideItems";
 import { useNavigate } from "react-router-dom";
 import { FaHome, FaUser, FaClipboardList } from "react-icons/fa";
@@ -21,7 +21,7 @@ const AdminSideBar = ({ toggleOpen }) => {
         <div className="sideBarLogo">
           <img src={logo} alt="logo" />
           <div>
-            <div className="sideBrandName">SHOEKART</div>
+            <div className="sideBrandName">SoleStyle</div>
             <Link
               to="/"
               className="sideBrandLink text-sm underline text-[#ccc] hover:text-white"
