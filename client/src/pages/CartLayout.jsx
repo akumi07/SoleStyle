@@ -20,7 +20,7 @@ const CartLayout = () => {
   }, []);
   const deleteItem = async (id, qty) => {
     try {
-      const response = await Axios.delete(`/cart/delete/${id}`, {
+      const response = await Axios.delete(`api/v1/cart/delete/${id}`, {
         headers: {
           Authorization: token,
         },

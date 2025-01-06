@@ -13,6 +13,16 @@ const Navbar = () => {
   const { auth, setAuth } = useAuth();
   const [isOpen, setIsOpen] = useState(false);
 
+  const handleCartClick = () => {
+    if (!auth) {
+      // If user is not logged in, redirect to the login page
+      navigate("/login");
+    } else {
+      // If user is logged in, navigate to the cart page
+      navigate("/cart");
+    }
+  };
+
   return (
     <div className="navigation-bar">
       <div
@@ -24,7 +34,7 @@ const Navbar = () => {
         <FiMenu />
       </div>
       <span className="logo">
-        <Link to="/">SHOEKART</Link>
+        <Link to="/">SoleStyle</Link>
         {/* <img src={logo} alt="LOGO" /> */}
       </span>
       <div className={isOpen ? "nav-links-md" : "nav-links"}>
@@ -36,6 +46,15 @@ const Navbar = () => {
         >
           <CgClose />
         </div>
+        <NavLink
+          to="/adminlogin"
+          className="nav-link"
+          onClick={() => {
+            setIsOpen(!isOpen);
+          }}
+        >
+          Dashboard
+        </NavLink>
         <NavLink
           to="/"
           className="nav-link"
@@ -91,10 +110,11 @@ const Navbar = () => {
             </Link>
           </div>
           <div className="btnIcon">
-            <Link to="/cart" style={{ color: "#1a1a1a" }}>
+            {/* Cart button logic to check if logged in */}
+            <div onClick={handleCartClick} style={{ cursor: 'pointer' }}>
               <FaShoppingCart />
               <div className="navAmount">{auth?.cartSize || 0}</div>
-            </Link>
+            </div>
           </div>
           <div className="btnIcon">
             {auth ? (

@@ -149,6 +149,32 @@ const createOrder = async (customer, data) => {
   }
 };
 
+
+// const createOrder = async (customer, data) => {
+//   try {
+//     const products = JSON.parse(data.metadata.cart);
+
+//     await order.create({
+//       userId: customer.metadata.userId,
+//       paymentIntentId: data.payment_intent,
+//       products: products.map((item) => ({
+//         productId: item.productId,
+//         quantity: item.qty, // Match your schema field here
+//         size: item.size,
+//       })),
+//       subtotal: data.amount_subtotal / 100,
+//       total: data.amount_total / 100,
+//       shipping: data.customer_details,
+//       payment_status: data.payment_status,
+//     });
+
+//     console.log("Order created successfully");
+//   } catch (err) {
+//     console.error("Error creating order:", err);
+//   }
+// };
+
+
 const webhook = asyncErrorHandler((request, response) => {
   let data;
   let eventType;
