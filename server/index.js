@@ -6,7 +6,7 @@ const connectDatabase = require("./db/connect");
 const errorHandlerMiddleware = require("./middleware/error");
 
 // Configure CORS
-const allowedOrigins = [process.env.FRONTEND_URL]; // Allow only the frontend domain
+const allowedOrigins = process.env.CLIENT_URL; // Allow only the frontend domain
 app.use(
   cors({
     origin: allowedOrigins, // Allow requests from your frontend
