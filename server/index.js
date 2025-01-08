@@ -9,9 +9,9 @@ const errorHandlerMiddleware = require("./middleware/error");
 const allowedOrigins = process.env.CLIENT_URL; // Allow only the frontend domain
 app.use(
   cors({
-    origin: allowedOrigins, // Allow requests from your frontend
-    methods: "GET,POST,PUT,DELETE,PATCH", // Allowed HTTP methods
-    credentials: true, // Allow credentials (cookies, headers, etc.)
+    origin: "*", // Allow all origins (for debugging only)
+    methods: "GET,POST,PUT,DELETE,PATCH",
+    credentials: true,
   })
 );
 
