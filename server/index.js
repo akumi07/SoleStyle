@@ -6,14 +6,15 @@ const connectDatabase = require("./db/connect");
 const errorHandlerMiddleware = require("./middleware/error");
 
 // Configure CORS
-const allowedOrigins = process.env.CLIENT_URL; // Allow only the frontend domain
+const allowedOrigins = process.env.CLIENT_URL || 'https://solestyleui.vercel.app';
 app.use(
   cors({
-    origin: "*", // Allow all origins (for debugging only)
+    origin: allowedOrigins, // Use the exact domain of your frontend
     methods: "GET,POST,PUT,DELETE,PATCH",
-    credentials: true,
+    credentials: true, // Allows cookies or authentication headers
   })
 );
+
 
 // Serve static files
 app.use(express.static("./public"));
