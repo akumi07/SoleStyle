@@ -6,7 +6,8 @@ const connectDatabase = require("./db/connect");
 const errorHandlerMiddleware = require("./middleware/error");
 
 // Configure CORS
-const allowedOrigins = ["https://sole-style-ui.vercel.app/"];
+const allowedOrigins = ["https://sole-style-ui.vercel.app/", "https://sole-style-ui.vercel.app",
+  "https://sole-style-ui.vercel.app/"];
 app.use(
   cors({
     origin: (origin, callback) => {
