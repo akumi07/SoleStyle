@@ -10,7 +10,7 @@ const allowedOrigins = ["https://sole-style-ui.vercel.app/"];
 app.use(
   cors({
     origin: (origin, callback) => {
-      // Allow requests with no 'origin' (e.g., Postman) and check against allowed origins
+      console.log("Origin received:", origin); // Debugging
       if (!origin || allowedOrigins.includes(origin)) {
         callback(null, true);
       } else {
@@ -18,9 +18,10 @@ app.use(
       }
     },
     methods: "GET,POST,PUT,DELETE,PATCH",
-    credentials: true, // Allow cookies and auth headers
+    credentials: true,
   })
 );
+
 
 
 
