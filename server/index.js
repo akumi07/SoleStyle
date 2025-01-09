@@ -6,7 +6,7 @@ const connectDatabase = require("./db/connect");
 const errorHandlerMiddleware = require("./middleware/error");
 
 // Configure CORS
-const allowedOrigins = process.env.CLIENT_URL || 'https://solestyleui.vercel.app';
+const allowedOrigins = process.env.CLIENT_URL;
 app.use(
   cors({
     origin: allowedOrigins, // Use the exact domain of your frontend
