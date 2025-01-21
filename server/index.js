@@ -6,26 +6,8 @@ const connectDatabase = require("./db/connect");
 const errorHandlerMiddleware = require("./middleware/error");
 
 // Configure CORS
-const allowedOrigins = ["https://sole-style-ui.vercel.app/", "https://sole-style-ui.vercel.app",
-  "https://sole-style-ui.vercel.app/"];
-app.use(
-  cors({
-    origin: (origin, callback) => {
-      console.log("Origin received:", origin); // Debugging
-      if (!origin || allowedOrigins.includes(origin)) {
-        callback(null, true);
-      } else {
-        callback(new Error("Not allowed by CORS"));
-      }
-    },
-    methods: "GET,POST,PUT,DELETE,PATCH",
-    credentials: true,
-  })
-);
 
-
-
-
+app.use(cors());
 // Serve static files
 app.use(express.static("./public"));
 
