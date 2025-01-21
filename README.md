@@ -1,8 +1,8 @@
 # Shoekart
 
-Welcome to Shoekart – where style meets comfort! Shoekart is an e-commerce platform dedicated to buying shoes, built on the MERN (MongoDB, Express.js, React.js, Node.js) stack. Shoekart not only provides a user-friendly interface for customers to browse and purchase shoes but also includes an admin section for managing products, orders, and users. Additionally, it features a secure payment section powered by Stripe.
+Welcome to SoleStyle – where style meets comfort! Shoekart is an e-commerce platform dedicated to buying shoes, built on the MERN (MongoDB, Express.js, React.js, Node.js) stack. SoleStyle not only provides a user-friendly interface for customers to browse and purchase shoes but also includes an admin section for managing products, orders, and users. Additionally, it features a secure payment section powered by Stripe.
 
-![Shoekart Landing Page](./client/src/Images/readmeImage.png)
+![SoleStyle Landing Page](./client/src/Images/bannerShoes2.jpg)
 
 ## Features
 
@@ -38,9 +38,9 @@ Welcome to Shoekart – where style meets comfort! Shoekart is an e-commerce pla
 
 ## Demo
 
-Explore the project: [Shoekart]()
+Explore the project: [SoleStyle]()
 
-To experience Shoekart as a demo user, navigate to [User Login]() and use the following credentials:
+To experience SoleStyle as a demo user, navigate to [User Login]() and use the following credentials:
 
 ```plaintext
 Username: user@gmail.com

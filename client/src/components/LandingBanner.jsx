@@ -1,4 +1,5 @@
 import image from "../Images/MAIN-SECTION.svg";
+import image2 from "../Images/bannerShoes.jpg";
 
 const LandingBanner = () => {
   return (
