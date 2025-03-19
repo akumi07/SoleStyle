@@ -38,9 +38,9 @@ Welcome to SoleStyle – where style meets comfort! Shoekart is an e-commerce pl
 
 ## Demo
 
-Explore the project: [SoleStyle]()
+Explore the project: [SoleStyle](https://sole-style-uik.vercel.app/)
 
-To experience SoleStyle as a demo user, navigate to [User Login]() and use the following credentials:
+To experience SoleStyle as a demo user, navigate to [User Login](https://sole-style-uik.vercel.app/login) and use the following credentials:
 
 ```plaintext
 Username: user@gmail.com
