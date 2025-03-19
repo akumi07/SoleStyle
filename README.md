@@ -47,7 +47,7 @@ Username: user@gmail.com
 Password: password
 ```
 
-You can access the admin section by navigating to [Admin Login]() and using the following credentials:
+You can access the admin section by navigating to [Admin Login](https://sole-style-uik.vercel.app/adminlogin) and using the following credentials:
 
 ```plaintext
 Username: admin@gmail.com
