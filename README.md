@@ -51,7 +51,7 @@ You can access the admin section by navigating to [Admin Login]() and using the 
 
 ```plaintext
 Username: admin@gmail.com
-Password: password
+Password: admin12345
 ```
 
 ## Installation
